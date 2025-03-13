@@ -173,3 +173,6 @@ cython_debug/
 
 # custom ignore
 env/
+datahub/data/
+logs/
+.env
