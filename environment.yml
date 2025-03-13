@@ -1,0 +1,9 @@
+# this will allows to create conda environment and install all the necessary libraries from requirements.txt file
+channels:
+ - defaults
+ - conda-forge
+dependencies:
+  - python==3.12
+  - pip
+  - pip:
+    - -r requirements.txt
