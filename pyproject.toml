@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "CustomerChurn-PredictionSystem"
+version = "0.0.1"
+description = "An Automated ML Pipeline for Customer Churn Prediction"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = "==3.12"
+
+authors = [
+    { name = "Anoop George", email = "anoopgeorge418@gmail.com" }
+]
+maintainers = [
+    { name = "Anoop George", email = "anoopgeorge418@gmail.com" }
+]
+
+keywords = [
+    "python",
+    "data analytics",
+    "data science",
+    "machine learning",
+    "machine learning pipeline",
+    "data pipeline",
+    "deployment",
+    "ci/cd",
+    "docker",
+    "git",
+    "github",
+    "end-to-end",
+    "mlflow",
+    "project docs",
+    "ai",
+    "model",
+    "postgresql",
+    "frontend",
+    "react",
+    "backend",
+    "fastapi",
+    "fullstack"
+]
+
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Build Tools",
+    "Programming Language :: Python :: 3.12"
+]
+
+[project.urls]
+Homepage = "https://underprocess.com"
+Documentation = "https://underprocess.org"
+Repository = "https://github.com/AnoopGeorge418/CustomerChurn-Prediction_System"
+Issues = "https://github.com/AnoopGeorge418/CustomerChurn-Prediction_System/issues"
+Changelog = "https://github.com/AnoopGeorge418/CustomerChurn-Prediction_System/blob/master/CHANGELOG.md"
+
+[tool.setuptools]
+packages = ["datahub", "app.backend"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"datahub" = ["*.csv", "*.json"]
+"app.backend" = ["*.yaml", "*.ini"]
+
+[tool.poetry.scripts]
+install-requirements = "sh -c 'pip install -r requirements.txt'"
