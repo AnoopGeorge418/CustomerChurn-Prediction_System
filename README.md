@@ -1,6 +1,20 @@
-# **CustomerChurn-Prediction_System**
+# **Customer Churn Prediction System 🚀**
 
-Building a Machine Learning Model with pipeline and simple yet effective user freindly UI and Backend using HTML, CSS, JS, Framworks, Python(Frameworks) as Backend. 
+## 📌 Project Overview
+This project predicts customer churn for a subscription-based service using an **Automated ML Pipeline** With `Frontend` and `Backend`.
+
+## 📂 Project Structure
+- `datahub/` - Machine Learning pipeline (data processing, training, monitoring)
+- `app/` - Backend API (FastAPI) and Frontend (React)
+- `env/` - Conda environments for ML and backend
+- `deployment/` - Docker, CI/CD setup
+- `docs/` - Project documentation
+
+## 🔥 Tech Stack
+- **ML & Data**: Python, Pandas, Scikit-Learn, MLflow, DVC
+- **Backend**: FastAPI, PostgreSQL, Pytest
+- **Frontend**: React, Chart.js, Tailwind CSS
+- **Pipeline & Deployment**: Apache Airflow, Docker, GitHub Actions
 
 ## **Project Structure**:
 
@@ -122,4 +136,17 @@ Building a Machine Learning Model with pipeline and simple yet effective user fr
         ├── pipelines/                        # Pipeline documentation
         ├── api/                              # API documentation
         ├── user_guide/                       # User documentation
+```
+
+## **Mermaid Design:**
+```bash
+    A User Input (Frontend - Html, Css, Js)] -->|Uploads Data / Requests Predictions| B[Backend (FastAPI API)]
+    B -->|Forwards Data| C[Machine Learning Pipeline (DataHub)]
+    B -->|Stores Data| D[Database (PostgreSQL)]
+    C -->|Processes & Predicts| B
+    C -->|Stores Predictions| D
+    C -->|Tracks Model Performance| E[Monitoring & Logging (MLflow, Airflow)]
+    E -->|Detects Drift & Retrains Models| C
+    B -->|Sends Predictions Back| A
+    B -->|Deploys Services| F[Deployment (Docker/Kubernetes/Cloud)]
 ```
