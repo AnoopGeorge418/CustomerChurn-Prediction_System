@@ -29,6 +29,12 @@ This project predicts customer churn for a subscription-based service using an *
     ├── docker-compose.yml                # Multi-container setup
     ├── Makefile                          # Automation commands
     ├── setup_env.bat                     # Automated Conda environment setup (Windows)
+    │ 
+    ├── exception/
+    │    ├──customException.py            # custom exception for entire project
+    │
+    ├── utils/
+    │    ├──customLogger.py                # custom logging for entire project
     │
     ├── env/                               # Conda environments (auto-created)
     │   ├── datahub_env/                   # DataHub Conda environment
